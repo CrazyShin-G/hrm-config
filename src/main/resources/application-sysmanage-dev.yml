@@ -1,0 +1,13 @@
+server:
+  port: 2010
+spring:
+  application:
+    name: hrm-sysmanage
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hrm-sys-manage
+    username: root
+    password: 123456
+mybatis-plus:
+  mapper-locations: classpath:com/erocraft/mapper/*Mapper.xml
+  type-aliases-package: com.erocraft.domain,com.erocraft.query

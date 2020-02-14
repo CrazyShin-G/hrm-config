@@ -1,0 +1,11 @@
+server:
+  port: 1030
+spring:
+  application:
+    name: zuul-gateway
+zuul:
+  routes:
+    myUser.serviceId: user-provider
+    myUser.path: /user/**
+  ignored-services: "*"
+  prefix: "/services"
