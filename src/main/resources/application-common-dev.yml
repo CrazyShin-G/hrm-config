@@ -1,0 +1,5 @@
+server:
+  port: 2090
+spring:
+  application:
+    name: hrm-common

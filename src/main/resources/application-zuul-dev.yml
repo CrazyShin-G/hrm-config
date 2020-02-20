@@ -7,6 +7,10 @@ zuul:
   routes:
     sysmanage.serviceId: hrm-sysmanage
     sysmanage.path: /sysmanage/**
+    common.serviceId: hrm-common
+    common.path: /common/**
+    course.serviceId: hrm-course
+    course.path: /course/**
   ignored-services: "*"
   prefix: "/services"
 retryable: true
@@ -15,7 +19,7 @@ ribbon:
   ReadTimeout: 2000
   OkToRetryOnAllOperations: true
   MaxAutoRetriesNextServer: 2
-  MaxAutoRetries: 1 #
+  MaxAutoRetries: 1
 hystrix:
   command:
     default:
