@@ -1,0 +1,12 @@
+server:
+  port: 2040
+spring:
+  application:
+    name: hrm-page-agent
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: guest
+  password: guest
+  virtualHost: /
+  routingKey: hrmCourseSite

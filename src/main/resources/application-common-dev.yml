@@ -1,5 +1,10 @@
 server:
   port: 2090
+  connection-timeout: 5000
 spring:
   application:
     name: hrm-common
+  servlet:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 10Mb

@@ -11,7 +11,7 @@ spring:
   data:
     elasticsearch:
       cluster-name: elasticsearch
-      cluster-nodes: 127.0.0.1:9300
+      cluster-nodes: 127.0.0.1:9300 #9200是图形界面端,9300代码端
 mybatis-plus:
   mapper-locations: classpath:com/erocraft/mapper/*Mapper.xml
-  type-aliases-package: com.erocraft.domain,cn.itsource.query
+  type-aliases-package: com.erocraft.domain,com.erocraft.query

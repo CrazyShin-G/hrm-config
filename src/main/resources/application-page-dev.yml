@@ -1,0 +1,32 @@
+server:
+  port: 2030
+spring:
+  application:
+    name: hrm-page
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hrm-page?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+mybatis-plus:
+  mapper-locations: classpath:com/erocraft/mapper/*Mapper.xml
+  type-aliases-package: com.erocraft.domain,com.erocraft.query
+ribbon:
+  ConnectTimeout: 250 # 连接超时时间(ms)
+  ReadTimeout: 2000 # 通信超时时间(ms)
+  OkToRetryOnAllOperations: true # 是否对所有操作重试
+  MaxAutoRetriesNextServer: 2 # 同一服务不同实例的重试次数
+  MaxAutoRetries: 1 # 同一实例的重试次数
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMillisecond: 3000 # 熔断超时时长：3000ms
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: guest
+  password: guest
+  virtualHost: /
